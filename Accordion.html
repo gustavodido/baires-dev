@@ -1,0 +1,38 @@
+<html>
+
+<head>
+</head>
+<body>
+    <ul>
+        <li>
+            <h3>One</h3>
+            <div>
+                <p>Content</p>
+            </div>
+        </li>
+        <li>
+            <h3>Two</h3>
+            <div>
+                <p>Content</p>
+            </div>
+        </li>
+        <li>
+            <h3>Three</h3>
+            <div>
+                <p>Content</p>
+            </div>
+        </li>
+    </ul>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function($) {
+    $('ul').find('h3').click(function(){
+      $(this).next().slideToggle('fast');
+      $("div").not($(this).next()).slideUp('fast');
+    });
+  });
+</script>
+
+</html>
